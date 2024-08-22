@@ -114,11 +114,19 @@
             margin-bottom: 10px;
         }
         .publication-links a {
-            margin-right: 10px;
-            color: #3498db;
-            text-decoration: none;
+            margin-right: 0; /* 기존의 오른쪽 마진 제거 */
+            padding-right: 10px; /* 대신 패딩으로 간격 조정 */
         }
-        .publication-links a:hover {
+        .publication-links a:last-child {
+            padding-right: 0; /* 마지막 링크의 오른쪽 패딩 제거 */
+        }
+        .publication-links a::after {
+            content: "/";
+            margin-left: 10px;
+            color: #7f8c8d; /* 구분자 색상 */
+        }
+        .publication-links a:last-child::after {
+            content: none; /* 마지막 링크 뒤의 구분자 제거 */
         }
         .author-highlight {
             font-weight: bold;
@@ -150,8 +158,7 @@
             <p>Hello! I am a PhD student at the Department of Artificial Intelligence Convergence at <a href="https://global.jnu.ac.kr/jnumain_en.aspx">Chonnam National University</a>. I work under the supervision of <a href="http://sclab.jnu.ac.kr/index.php/about-us/">Hyung-Jeong Yang</a>. My research focuses on how AI can learn the aspects of human-human interaction when interacting with people. In addition, I am interested in researching and developing a model that recognizes human emotions through multimodality. Emotion recognition is basic research that can be expanded to study depression classification, social interaction, and empathy.</p>
             
             <div class="links">
-                <a href="https://scholar.google.com/citations?user=8epaYTwAAAAJ&hl=ko">Google Scholar</a>
-                <a href="https://drive.google.com/file/d/1Tq6ESek74kzgelgKDSuFt2oSargGWvUF/view?usp=sharing">CV</a>
+                <a href="https://scholar.google.com/citations?user=8epaYTwAAAAJ&hl=ko">Google Scholar</a>/<a href="https://drive.google.com/file/d/1Tq6ESek74kzgelgKDSuFt2oSargGWvUF/view?usp=sharing">CV</a>
             </div>
         </div>
     </div>
