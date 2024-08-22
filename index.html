@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eungyeup Kim - Personal Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        .email {
+            font-style: italic;
+        }
+        .profile-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        .profile-image {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .links a {
+            margin-right: 10px;
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        .footnote {
+            font-size: 0.8em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Eunchae Lim</h1>
+    <p class="email">218354@jnu.ac.kr, enechae78@gmail.com</p>
+
+    <div class="profile-container">
+        <div>
+            <p>Hello! I am Eunchae Lim, a PhD student at the Department of Artificial Intelligence Convergence at Chonnam National University. I work under the supervision of Hyung-Jeong Yang. My research focuses on how AI can learn the aspects of human-human interaction when interacting with people. In addition, I am interested in researching and developing a model that recognizes human emotions through multimodality. Emotion recognition is basic research that can be expanded to study depression classification, social interaction, and empathy. <a href="#">Jaegul Choo</a>.</p>
+            
+            <div class="links">
+                <a href="#">Google Scholar</a> /
+                <a href="#">GitHub</a> /
+                <a href="#">CV</a> /
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+        <img src="/api/placeholder/200/200" alt="Eunchae Lim" class="profile-image">
+    </div>
+
+    <p class="footnote">* indicates equal contribution</p>
+
+    <script>
+        // 이메일 주소 보호를 위한 JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            const emailElement = document.querySelector('.email');
+            emailElement.textContent = emailElement.textContent.replace(' (at) ', '@').replace(' (dot) ', '.');
+        });
+    </script>
+</body>
+</html>
