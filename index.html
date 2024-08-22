@@ -5,67 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eunchae Lim - Personal Page</title>
     <style>
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('fonts/CustomFont.otf') format('otf');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'CustomFont', Arial, sans-serif;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
             line-height: 1.6;
+            color: #333;
         }
         h1 {
             font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 10px;
         }
         .email {
             font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 20px;
         }
         .profile-container {
             display: flex;
             align-items: flex-start;
-            gap: 20px;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .profile-content {
+            flex: 1;
+            min-width: 300px;
         }
         .profile-image {
             width: 200px;
             height: auto;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .links {
+            margin-top: 20px;
         }
         .links a {
-            margin-right: 10px;
-            color: #0066cc;
+            margin-right: 15px;
+            color: #3498db;
             text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
         }
         .links a:hover {
+            color: #2980b9;
             text-decoration: underline;
         }
         .footnote {
             font-size: 0.8em;
-            margin-top: 20px;
+            margin-top: 30px;
+            color: #7f8c8d;
+        }
+        @media (max-width: 600px) {
+            .profile-container {
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+            .profile-image {
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <h1>Eunchae Lim</h1>
     <p class="email">218354@jnu.ac.kr, enechae78@gmail.com</p>
-
     <div class="profile-container">
-        <div>
-            <p>Hello! I am a PhD student at the Department of Artificial Intelligence Convergence at <a href="https://global.jnu.ac.kr/jnumain_en.aspx"> Chonnam National University </a>. I work under the supervision of <a href="http://sclab.jnu.ac.kr/index.php/about-us/"> Hyung-Jeong Yang </a>. My research focuses on how AI can learn the aspects of human-human interaction when interacting with people. In addition, I am interested in researching and developing a model that recognizes human emotions through multimodality. Emotion recognition is basic research that can be expanded to study depression classification, social interaction, and empathy.</p>
+        <div class="profile-content">
+            <p>Hello! I am a PhD student at the Department of Artificial Intelligence Convergence at <a href="https://global.jnu.ac.kr/jnumain_en.aspx">Chonnam National University</a>. I work under the supervision of <a href="http://sclab.jnu.ac.kr/index.php/about-us/">Hyung-Jeong Yang</a>. My research focuses on how AI can learn the aspects of human-human interaction when interacting with people. In addition, I am interested in researching and developing a model that recognizes human emotions through multimodality. Emotion recognition is basic research that can be expanded to study depression classification, social interaction, and empathy.</p>
             
             <div class="links">
-                <a href="https://scholar.google.com/citations?user=8epaYTwAAAAJ&hl=ko"> Google Scholar</a> /
-                <a href="https://drive.google.com/file/d/1Tq6ESek74kzgelgKDSuFt2oSargGWvUF/view?usp=sharing"> CV </a>
+                <a href="https://scholar.google.com/citations?user=8epaYTwAAAAJ&hl=ko">Google Scholar</a>
+                <a href="https://drive.google.com/file/d/1Tq6ESek74kzgelgKDSuFt2oSargGWvUF/view?usp=sharing">CV</a>
             </div>
         </div>
         <img src="images/profile.jpg" alt="Eunchae Lim" class="profile-image">
     </div>
-
     <p class="footnote">* indicates equal contribution.</p>
-
-    <script>
-        // 이메일 주소 보호를 위한 JavaScript
-        document.addEventListener('DOMContentLoaded', function() {
-            const emailElement = document.querySelector('.email');
-            emailElement.textContent = emailElement.textContent.replace(' (at) ', '@').replace(' (dot) ', '.');
-        });
-    </script>
 </body>
 </html>
