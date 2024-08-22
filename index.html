@@ -113,20 +113,13 @@
             color: #7f8c8d;
             margin-bottom: 10px;
         }
-        .publication-links a {
-            margin-right: 0; /* 기존의 오른쪽 마진 제거 */
-            padding-right: 10px; /* 대신 패딩으로 간격 조정 */
+         .publication-links a {
+            margin-right: 10px;
+            color: #3498db;
+            text-decoration: none;
         }
-        .publication-links a:last-child {
-            padding-right: 0; /* 마지막 링크의 오른쪽 패딩 제거 */
-        }
-        .publication-links a::after {
-            content: "/";
-            margin-left: 10px;
-            color: #7f8c8d; /* 구분자 색상 */
-        }
-        .publication-links a:last-child::after {
-            content: none; /* 마지막 링크 뒤의 구분자 제거 */
+        .publication-links a:hover {
+            text-decoration: underline;
         }
         .author-highlight {
             font-weight: bold;
