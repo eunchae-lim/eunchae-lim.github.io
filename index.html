@@ -39,24 +39,26 @@
             margin-bottom: 20px;
         }
         
-        /* 타이핑 애니메이션을 위한 스타일 */
+        /* 타이핑 애니메이션을 위한 텍스트 스타일 */
         .typing {
-            font-size: 1.5em;
-            border-right: 2px solid #00bfff;
             white-space: nowrap;
             overflow: hidden;
-            width: 0;
-            animation: typing 3s steps(30, end), blink 0.5s step-end infinite;
-            margin-top: -10px; /* h1과 타이핑 애니메이션 간의 간격 조절 */
+            display: inline-block;
+            vertical-align: bottom;
         }
         
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
+        /* 커서 스타일 */
+        .cursor {
+            display: inline-block;
+            background-color: transparent;
+            animation: blink 0.7s steps(1) infinite;
+            font-size: 1.5em;
+            vertical-align: bottom;
         }
         
+        /* 깜박이는 커서 효과 */
         @keyframes blink {
-            50% { border-color: transparent; }
+            50% { opacity: 0; }
         }
 
         .profile-container {
