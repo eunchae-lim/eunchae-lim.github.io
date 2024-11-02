@@ -13,7 +13,7 @@
         }
 
         body {
-            font-family: 'CustomFont', Arial, sans-serif;
+            font-family: Arial, sans-serif;
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
@@ -21,24 +21,44 @@
             color: #333;
             background-color: #e6f3ff;
         }
+        
         h1, h2 {
             color: #2c3e50;
             border-bottom: 2px solid #3498db;
             padding-bottom: 10px;
         }
+        
         h1 {
             font-size: 2.5em;
-            margin-bottom: 20px;
+            margin-bottom: 10px; /* h2와 간격을 좁힙니다 */
         }
-        h2 {
-            font-size: 2em;
-            margin-top: 40px;
-        }
+        
         .email {
             font-style: italic;
             color: #7f8c8d;
             margin-bottom: 20px;
         }
+        
+        /* 타이핑 애니메이션을 위한 스타일 */
+        .typing {
+            font-size: 1.5em;
+            border-right: 2px solid #00bfff;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: typing 3s steps(30, end), blink 0.5s step-end infinite;
+            margin-top: -10px; /* h1과 타이핑 애니메이션 간의 간격 조절 */
+        }
+        
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
         .profile-container {
             display: flex;
             align-items: flex-start;
@@ -144,6 +164,7 @@
 </head>
 <body>
     <h1>Eunchae Lim</h1>
+    <h2 class="typing" id="dynamic-text"></h2>
     <p class="email">218354@jnu.ac.kr, enechae78@gmail.com</p>
     <div class="profile-container">
         <img src="images/profile.jpg" alt="Eunchae Lim" class="profile-image">
@@ -229,5 +250,6 @@
             </div>
         </div>
     </div> 
+    <script src="script.js"></script>
 </body>
 </html>
